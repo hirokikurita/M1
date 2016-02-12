@@ -1,0 +1,185 @@
+\documentclass[uplatex,11pt,a4paper]{jsarticle}
+%
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{ascmac}
+%
+\setlength{\textwidth}{\fullwidth}
+\setlength{\textheight}{39\baselineskip}
+\addtolength{\textheight}{\topskip}
+\setlength{\voffset}{-0.5in}
+\setlength{\headsep}{0.3in}
+%
+\newcommand{\divergence}{\mathrm{div}\,}  %ダイバージェンス
+\newcommand{\grad}{\mathrm{grad}\,}  %グラディエント
+\newcommand{\rot}{\mathrm{rot}\,}  %ローテーション
+%
+\pagestyle{myheadings}
+\markright{\footnotesize \sf 物理のかぎしっぽ \ \texttt{ http://www12.plala.or.jp/ksp/}}
+\begin{document}
+%
+
+\begin{eqnarray}
+\left(\begin{array}{c}
+\rm u_o\\
+\rm u_o'\\
+\end{array}
+\right)&=&\left(
+\begin{array}{cc}
+1& 0 \\
+\mathrm{\frac{1}{R}\rm tan\beta_2}&1 \\
+\end{array}
+\right)\left(
+\begin{array}{cc}
+\rm \cos\theta &\rm R\sin\theta \\
+\rm{-\frac{1}{R}\sin\theta}&\rm \cos\theta \\
+\end{array}
+\right)\left(
+\begin{array}{cc}
+1& 0 \\
+\mathrm{\frac{1}{R}\rm tan\beta_1 }&1 \\
+\end{array}
+\right)\left(
+\begin{array}{c}
+\rm u_i\\
+\rm u_i'\\
+\end{array}
+\right)\\
+&=&\left(
+\begin{array}{cc}
+1& 0 \\
+\mathrm{\frac{1}{R}tan\beta_2}&1 \\
+\end{array}
+\right)\left(
+\begin{array}{c}
+\rm u\\
+\rm u'\\
+\end{array}
+ \right)\\
+\left( 
+\begin{array}{c}
+\rm u\\
+\rm u'\\
+\end{array} \right)&=&\left(
+\begin{array}{cc}
+\rm \cos\theta &\rm R\sin\theta \\
+\rm -\frac{1}{R}\sin\theta & \rm \cos\theta \\
+\end{array}
+\right)
+\left(
+\begin{array}{cc}
+1& 0 \\
+\rm \frac{1}{R}\rm tan\beta_1 &1 \\
+\end{array}
+\right)\left( \begin{array}{c}
+\rm u_i\\
+\rm u_i'\\
+\end{array} \right)
+\\
+\left( 
+\begin{array}{c}
+\rm u\\
+\rm u'\\
+\end{array} \right)&=&\left(
+\begin{array}{cc}
+\rm \cos\theta &\rm R\sin\theta \\
+\mathrm{-\frac{1}{R}\sin\theta}&\rm \cos\theta \\
+\end{array}
+\right)
+\left(
+\begin{array}{cc}
+1& 0 \\
+\mathrm{\frac{1}{R} tan\beta_1 }&1 \\
+\end{array}
+\right)\left( \begin{array}{c}
+\rm u_i\\
+\rm u_i'\\
+\end{array} \right)
++\left(
+\begin{array}{c}
+\rm \Delta u\\
+\rm \Delta u'\\
+\end{array}
+\right)\\
+\left(\begin{array}{c}
+\rm u_o\\
+\rm u_o'\\
+\end{array}\right)
+&=&\left(
+\begin{array}{cc}
+1& 0 \\
+\mathrm{\frac{1}{R}\rm tan\beta_2 }&1 \\
+\end{array}
+\right)
+\left(\begin{array}{c}
+\rm u\\
+\rm u'\\
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+\Delta u\\
+\Delta u'\\
+\end{array}
+\right)\\
+\left(
+\begin{array}{c}
+z_o \\
+z_o'\\
+\end{array}\right)&=&\left( 
+\begin{array}{cc}
+1 & 0 \\
+\frac{-1}{R}\rm tan \beta_2 & 1\\
+\end{array} \right)
+\left( \begin{array}{cc}
+1 & L\\
+0 & 1\\
+\end{array}
+\right)\left(
+\begin{array}{cc}
+1 & 0 \\
+\frac{-1}{R}\rm tan \beta_1 & 1\\
+\end{array} \right)
+\left(\begin{array}{c}
+z_i\\
+z_i'\\
+\end{array}
+\right)\\
+\left(
+\begin{array}{c}
+z \\
+z'\\
+\end{array}\right)&=&\left(
+\begin{array}{cc}
+1&L\\
+0&1\\
+\end{array}
+\right)\left(
+\begin{array}{cc}
+1&0\\
+\frac{-1}{R}\rm tan \beta_1 & 1\\
+\end{array}\right)
+\left(
+\begin{array}{c}
+z_i\\
+z_i'\\
+\end{array}\right)\\
+\rm u&=&\rm u(s)\\
+\rm z&=&\rm z(s)\\
+\rm u'=\frac{\rm du}{\rm ds}\\
+\rm z'=\frac{\rm dz}{\rm ds}\\
+\left(\begin{array}{c}
+\mathrm{\Delta u }\\
+\mathrm{\Delta u'}\\
+\end{array}\right)
+&=&
+\left(\begin{array}{c}
+\mathrm{\sqrt{2a^2 \cos^2 \theta + 2a\cos\theta \sqrt{R^2-2aR+a^2\cos^2\theta}+R^2-2\alpha R}-R}\\
+\mathrm{\frac{-4 a^2\cos\theta\sin\theta- 2a\sin \theta\sqrt{R^2-2a R+a^2\cos^2\theta}-\frac{2a^3\cos^2\theta\sin\theta}{\sqrt{R^2-2a R+a^2\cos^2\theta}}}{2R\sqrt{2a^2 \cos^2 \theta + 2a\cos\theta \sqrt{R^2-2a R+a^2\cos^2\theta}+R^2-2a R}}}\\
+\end{array}\right)\\
+\mathrm{\Delta u }&=&\mathrm{\sqrt{2a^2 \cos^2 \theta + 2a\cos\theta \sqrt{R^2-2a R+a^2\cos^2\theta}+R^2-2a R}-R}\\
+\mathrm{\Delta u'}&=&\mathrm{\frac{-4 a^2\cos\theta\sin\theta- 2a\sin \theta\sqrt{R^2-2a R+a^2\cos^2\theta}-\frac{2a^3\cos^2\theta\sin\theta}{\sqrt{R^2-2a R+a^2\cos^2\theta}}}{2R\sqrt{2a^2 \cos^2 \theta + 2a\cos\theta \sqrt{R^2-2a R+a^2\cos^2\theta}+R^2-2a R}}}\\
+\mathrm{a}&=&\mathrm{R\sqrt{\frac{E-\Delta E}{E}}}
+\end{eqnarray}
+\end{document}
